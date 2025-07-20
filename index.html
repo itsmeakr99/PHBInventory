@@ -22,7 +22,7 @@
         <main class="main-content">
             <h3 id="category-title"></h3>
 
-            <!-- 👇 Top controls section moved here -->
+            <!-- 👇 Controls and Search moved to top and cleaned -->
             <div class="top-bar" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
                 <input id="new-item-name" type="text" placeholder="Item name" />
                 <input id="new-item-qty" type="number" placeholder="Qty" />
@@ -30,7 +30,6 @@
                 <input id="search" type="text" placeholder="Search..." oninput="renderItems()" style="flex: 1;" />
             </div>
 
-            <!-- Inventory Table -->
             <table id="items-table">
                 <thead>
                     <tr>
@@ -43,6 +42,7 @@
             </table>
         </main>
     </div>
+
     <script src="script.js"></script>
 </body>
 
