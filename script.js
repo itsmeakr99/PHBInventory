@@ -303,6 +303,7 @@ function saveEdit(index) {
     renderItems();
 }
 
+
 function exportCSV() {
     // Trigger PDF download after export
     const pdfLink = document.querySelector('.download-btn');
@@ -320,7 +321,7 @@ function exportCSV() {
         const row = categoryNames.map(cat => {
             const item = categories[cat][i];
             if (!item) return "";
-            return `"${item.name}${item.quantity !== null ? " (" + item.quantity + ")" : ""}"`;
+            return `"\${item.name}\${item.quantity !== null ? " (\${item.quantity})" : ""}"`;
         });
         csv += row.join(",") + "\n";
     }
@@ -332,15 +333,4 @@ function exportCSV() {
     link.click();
 }
 
-
-    // Trigger download
-    const blob = new Blob([csv], { type: "text/csv" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "PHB_Inventory_Sheet.csv";
-    link.click();
-}
-
-
 renderCategories();
-renderItems();
