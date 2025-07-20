@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #f1f5f9;
+}
+
+#app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: #fff;
+    padding: 20px;
+    width: 240px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: #f9fafb;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input,
+button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+button[onclick="exportCSV()"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[onclick="exportCSV()"]:hover {
+    background-color: #218838;
+}
+
+
+.download-btn.orange-btn {
+    background-color: #fd7e14;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.download-btn.orange-btn:hover {
+    background-color: #e06b0f;
+}

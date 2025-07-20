@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHB Inventory</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <h2>Inventory</h2>
+            <div id="category-buttons"></div>
+            <button onclick="exportCSV()">Export as CSV</button>
+            <div style="margin-top:10px;">
+                <a href="PHB_Inventory_Sheet.pdf" download class="download-btn orange-btn">Download Inventory Sheet PDF</a>
+            </div>
+            </div>
+            
+        </aside>
+        <main class="main-content">
+            <h3 id="category-title"></h3>
+            <div class="controls">
+                <input id="new-item-name" type="text" placeholder="Item name" />
+                <input id="new-item-qty" type="number" placeholder="Qty" />
+                <button onclick="addItem()">Add Item</button>
+            </div>
+            <input id="search" type="text" placeholder="Search..." oninput="renderItems()" />
+            <table id="items-table">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
