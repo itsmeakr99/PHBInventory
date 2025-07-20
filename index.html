@@ -17,17 +17,20 @@
             <div style="margin-top:10px;">
                 <a href="PHB_Inventory_Sheet.pdf" download class="download-btn orange-btn">Download Inventory PDF</a>
             </div>
-            </div>
-            
         </aside>
+
         <main class="main-content">
             <h3 id="category-title"></h3>
-            <div class="controls">
+
+            <!-- 👇 Top controls section moved here -->
+            <div class="top-bar" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
                 <input id="new-item-name" type="text" placeholder="Item name" />
                 <input id="new-item-qty" type="number" placeholder="Qty" />
                 <button onclick="addItem()">Add Item</button>
+                <input id="search" type="text" placeholder="Search..." oninput="renderItems()" style="flex: 1;" />
             </div>
-            <input id="search" type="text" placeholder="Search..." oninput="renderItems()" />
+
+            <!-- Inventory Table -->
             <table id="items-table">
                 <thead>
                     <tr>
