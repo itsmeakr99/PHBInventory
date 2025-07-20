@@ -68,7 +68,7 @@ button[onclick="exportCSV()"]:hover {
 
 
 .download-btn.orange-btn {
-    background-color: #fd7e14;
+    background-color: #28a745;
     color: white;
     padding: 8px 12px;
     border-radius: 4px;
@@ -77,5 +77,5 @@ button[onclick="exportCSV()"]:hover {
 }
 
 .download-btn.orange-btn:hover {
-    background-color: #e06b0f;
+    background-color: #218838;
 }
