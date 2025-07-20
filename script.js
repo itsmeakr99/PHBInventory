@@ -177,9 +177,37 @@ const categories = {
     { name: "Malabar Parota", quantity: 0 },
     { name: "Malai Kofta Balls", quantity: 0 }
 ]
+    Preparations: [
+    { name: "Biryani Masala", quantity: 0 },
+    { name: "Fried Onions", quantity: 0 },
+    { name: "Ginger Garlic Paste", quantity: 0 },
+    { name: "Yogurt", quantity: 0 },
+    { name: "Raita", quantity: 0 },
+    { name: "Salan", quantity: 0 },
+    { name: "Nalli Gosh", quantity: 0 },
+    { name: "Kheema", quantity: 0 },
+    { name: "Ghee", quantity: 0 },
+    { name: "65 Sauce", quantity: 0 },
+    { name: "Pepper Sauce", quantity: 0 },
+    { name: "Chilli Sauce", quantity: 0 },
+    { name: "Tikka Sauce", quantity: 0 },
+    { name: "Tangdi Sauce", quantity: 0 },
+    { name: "Haryali Sauce", quantity: 0 },
+    { name: "Malai Sauce", quantity: 0 },
+    { name: "Onion Sauce", quantity: 0 },
+    { name: "Tomato Sauce", quantity: 0 },
+    { name: "White Gravy", quantity: 0 },
+    { name: "Cashew Paste", quantity: 0 },
+    { name: "Dal Makhni", quantity: 0 },
+    { name: "Apricot Paste", quantity: 0 },
+    { name: "Custard", quantity: 0 },
+    { name: "DKM", quantity: 0 },
+    { name: "Rabdi", quantity: 0 },
+    { name: "Pakora Mix", quantity: 0 },
+    { name: "Curry Powder", quantity: 0 }
+]
 ,
     Miscellaneous: [],
-    Preparations: [],
 };
 
 let activeCategory = "Produce";
