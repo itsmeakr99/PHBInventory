@@ -97,3 +97,35 @@ button[onclick="exportCSV()"]:hover {
 .top-bar button:hover {
     background-color: #0069d9;
 }
+
+/* Style all buttons inside the sidebar the same */
+.sidebar button,
+.sidebar .download-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Special color for Download Inventory PDF */
+.sidebar .orange-btn {
+    background-color: #fd7e14;
+}
+
+.sidebar .orange-btn:hover {
+    background-color: #e06b0f;
+}
+
+/* Hover state for other sidebar buttons */
+.sidebar button:hover {
+    background-color: #0069d9;
+}
+
