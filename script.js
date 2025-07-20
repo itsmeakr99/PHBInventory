@@ -1,5 +1,25 @@
 const categories = {
-    Produce: [],
+    Produce: [
+    { name: "Bell Pepper", quantity: null },
+    { name: "Cabbage", quantity: null },
+    { name: "Carrot", quantity: null },
+    { name: "Cilantro", quantity: null },
+    { name: "Curry Leaves", quantity: null },
+    { name: "Egg Plant", quantity: null },
+    { name: "Garlic", quantity: null },
+    { name: "Ginger", quantity: null },
+    { name: "Green Beans", quantity: null },
+    { name: "Lemon", quantity: null },
+    { name: "Mint", quantity: null },
+    { name: "Thai Chilli", quantity: null },
+    { name: "Anhem Pakora Chilli", quantity: null },
+    { name: "Fingerhot Chilli", quantity: null },
+    { name: "Potatos", quantity: null },
+    { name: "Yellow Onions", quantity: null },
+    { name: "Red Onions", quantity: null },
+    { name: "Spring Onions", quantity: null }
+]
+,
     Dairy: [],
     Meat: [],
     "Packing Materials": [],
