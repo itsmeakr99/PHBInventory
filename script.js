@@ -304,30 +304,39 @@ function saveEdit(index) {
 }
 
 function exportCSV() {
-
     // Automatically trigger PDF download after CSV export
     const pdfLink = document.querySelector('.download-btn');
     if (pdfLink) {
         pdfLink.click();
     }
 
-    let csv = "Category,Item,Quantity\n";
-    for (const cat in categories) {
-        categories[cat].forEach(({
-            name,
-            quantity
-        }) => {
-            csv += `"${cat}","${name}","${quantity ?? ""}"\n`;
+    // Get all category keys
+    const categoryNames = Object.keys(categories);
+
+    // Determine max number of rows across all categories
+    const maxLength = Math.max(...categoryNames.map(cat => categories[cat].length));
+
+    // Start with header row
+    let csv = categoryNames.map(cat => `"${cat}"`).join(",") + "\n";
+
+    // Build rows by aligning items
+    for (let i = 0; i < maxLength; i++) {
+        const row = categoryNames.map(cat => {
+            const item = categories[cat][i];
+            if (!item) return "";
+            return `"${item.name}${item.quantity !== null ? " (" + item.quantity + ")" : ""}"`;
         });
+        csv += row.join(",") + "\n";
     }
-    const blob = new Blob([csv], {
-        type: "text/csv"
-    });
+
+    // Trigger download
+    const blob = new Blob([csv], { type: "text/csv" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "inventory.csv";
+    link.download = "PHB_Inventory_Sheet.csv";
     link.click();
 }
+
 
 renderCategories();
 renderItems();
