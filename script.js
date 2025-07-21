@@ -306,30 +306,33 @@ function saveEdit(index) {
 }
 
 function exportCSV() {
+    const categoryNames = Object.keys(categories);
+    const maxLength = Math.max(...categoryNames.map(cat => categories[cat].length));
 
-    // Automatically trigger PDF download after CSV export
-    const pdfLink = document.querySelector('.download-btn');
-    if (pdfLink) {
-        pdfLink.click();
+    const rows = [];
+    const header = categoryNames.join(","); // CSV headers
+    rows.push(header);
+
+    for (let i = 0; i < maxLength; i++) {
+        const row = categoryNames.map(cat => {
+            const item = categories[cat][i];
+            return item ? `"${item.name} (${item.quantity ?? 0})"` : "";
+        }).join(",");
+        rows.push(row);
     }
 
-    let csv = "Category,Item,Quantity\n";
-    for (const cat in categories) {
-        categories[cat].forEach(({
-            name,
-            quantity
-        }) => {
-            csv += `"${cat}","${name}","${quantity ?? ""}"\n`;
-        });
-    }
-    const blob = new Blob([csv], {
-        type: "text/csv"
-    });
+    const csvContent = rows.join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "inventory.csv";
+    link.download = "PHB_Inventory_Formatted.csv";
     link.click();
+
+    // Auto-download the PDF
+    const pdfLink = document.querySelector('.download-btn');
+    if (pdfLink) pdfLink.click();
 }
+
 
 renderCategories();
 renderItems();
