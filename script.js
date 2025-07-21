@@ -177,6 +177,7 @@ const categories = {
     { name: "Malabar Parota", quantity: 0 },
     { name: "Malai Kofta Balls", quantity: 0 }
 ]
+,
     Preparations: [
     { name: "Biryani Masala", quantity: 0 },
     { name: "Fried Onions", quantity: 0 },
