@@ -305,6 +305,32 @@ function saveEdit(index) {
     renderItems();
 }
 
+/*function exportCSV() {
+
+    // Automatically trigger PDF download after CSV export
+    //const pdfLink = document.querySelector('.download-btn');
+   // if (pdfLink) {
+     //   pdfLink.click();
+   // }
+
+    let csv = "Category,Item,Quantity\n";
+    for (const cat in categories) {
+        categories[cat].forEach(({
+            name,
+            quantity
+        }) => {
+            csv += `"${cat}","${name}","${quantity ?? ""}"\n`;
+        });
+    }
+    const blob = new Blob([csv], {
+        type: "text/csv"
+    });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "inventory.csv";
+    link.click();
+}*/
+
 function exportCSV() {
     const categoryNames = Object.keys(categories);
     const maxLength = Math.max(...categoryNames.map(cat => categories[cat].length));
@@ -327,12 +353,7 @@ function exportCSV() {
     link.href = URL.createObjectURL(blob);
     link.download = "PHB_Inventory_Formatted.csv";
     link.click();
-
-    // Auto-download the PDF
-    const pdfLink = document.querySelector('.download-btn');
-    if (pdfLink) pdfLink.click();
 }
-
 
 renderCategories();
 renderItems();
