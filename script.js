@@ -178,7 +178,7 @@ const categories = {
     { name: "Malai Kofta Balls", quantity: 0 }
 ]
 ,
-    Preparations: [
+    "Preparations": [
     { name: "Biryani Masala", quantity: 0 },
     { name: "Fried Onions", quantity: 0 },
     { name: "Ginger Garlic Paste", quantity: 0 },
@@ -208,7 +208,7 @@ const categories = {
     { name: "Curry Powder", quantity: 0 }
 ]
 ,
-    Miscellaneous: [],
+    "Miscellaneous": [],
 };
 
 
